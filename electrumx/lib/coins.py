@@ -349,6 +349,24 @@ class KomodoMixin:
                     '63bfa1beae327897f56c5cfb7daaae71')
     DESERIALIZER = lib_tx.DeserializerZcash
 
+class Kotia(ScryptMixin, Coin):
+    NAME = "Kotia"
+    SHORTNAME = "KOT"
+    NET = "mainnet"
+    P2PKH_VERBYTE = bytes.fromhex("46")
+    P2SH_VERBYTES = bytes.fromhex("45")
+    WIF_BYTE = bytes.fromhex("99")
+    GENESIS_HASH = ('000008e4586479cd9dc5832b262414a60f152381e371cf7940ffe9f5aa4b80a0')
+    DESERIALIZER = lib_tx.DeserializerTokenPay
+    DAEMON = daemon.LegacyRPCDaemon
+    TX_COUNT = 4594999
+    TX_COUNT_HEIGHT = 1667070
+    TX_PER_BLOCK = 3
+    ESTIMATE_FEE = 0.0001
+    RELAY_FEE = 0.0001
+    RPC_PORT = 46173
+    REORG_LIMIT = 500 
+
 
 class BitcoinMixin:
     SHORTNAME = "BTC"
