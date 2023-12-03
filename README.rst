@@ -14,11 +14,21 @@ ElectrumX - Reimplementation of electrum-server
 This project is a fork of `kyuupichan/electrumx <https://github.com/kyuupichan/electrumx>`_.
 The original author dropped support for Bitcoin, which we intend to keep.
 
-ElectrumX allows users to run their own Electrum server. It connects to your
-full node and indexes the blockchain, allowing efficient querying of the history of
-arbitrary addresses. The server can be exposed publicly, and joined to the public network
-of servers via peer discovery. As of May 2020, a significant chunk of the public
-Electrum server network runs ElectrumX.
+Required Libs (Python3.8)
+=============
+sudo python3.8 -m pip install aiorpcx
+sudo python3.8 -m pip install aiohttp
+sudo python3.8 -m pip install pylru
+sudo python3.8 -m pip install pycryptodome
+sudo python3.8  -m pip install websockets
+sudo apt-get install python3-setuptools
+sudo python3.8 -m pip install --upgrade pip
+sudo python3.8 -m pip install aiorpcx==0.22.1
+sudo python3.8 -m pip install aiohttp==3.8.3
+sudo python3.8 -m pip install plyvel==1.2.0
+sudo python3.8 -m pip install pycryptodome==3.14.0
+alias python3=python3.8
+
 
 Documentation
 =============
